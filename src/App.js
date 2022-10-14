@@ -1,22 +1,28 @@
 import logo from './logo.svg';
+import nani from './nani.jpg';
+import nani2 from './nani22.png';
 import './App.css';
+import React from 'react';
 
 function App() {
+  const [lightMode, setLightMode ] = React.useState(false)
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <img
+            className="image-container"
+            onClick={() => setLightMode(prevMode => !prevMode)}
+            src={lightMode ? nani : nani2}
+            alt="lightning-bolt"
+            height="30px"
+          />
+        <p className="header-text">
+          Can you feel the world spinning?
+        <br></br>
+          <p className = "header-text-small">Made possible by Nani Inc.</p>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
