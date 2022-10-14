@@ -10,6 +10,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <p className="header-text-big">
+          VERKOZEN TOT 
+          <br></br>
+          "BESTE MENS VAN HET JAAR":
+        </p>
         <img src={logo} className="App-logo" alt="logo" />
         <img
             className="image-container"
